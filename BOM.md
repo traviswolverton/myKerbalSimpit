@@ -60,23 +60,23 @@ STL files already included in `STL/`, no shopping needed beyond filament.
 
 ## Electronics not covered by the Parts List (custom PCB)
 
-The assembly drawing's Parts List does not include the PCB's own components. Pulled from
-`Circuit Board/SCH_Schematic1_2024-05-04.pdf`, which shows the board built around:
+The assembly drawing's Parts List does not include the PCB's own components. These are
+confirmed straight from `Circuit Board/Kerbal Controller.eprj` (EasyEDA Pro's native project
+file, which is a plain SQLite database — queried directly rather than relying on the schematic
+PDF's OCR-scrambled text):
 
-- 74HC595 shift-out registers (drive the LEDs)
-- 74HC165 shift-in registers (read the buttons/switches)
-- A bank of current-limiting resistors (R1–R32)
+| Qty | Part | Role |
+|---|---|---|
+| 8 | 74HC165N | Input shift register (reads buttons/switches) |
+| 4 | 74HC595N | Output shift register (drives LEDs) |
+| 32 | Resistor, 220kΩ, 1/4W, ±5% (MFR part `MO1/4W-220K±5%-ST52`), designators R1–R32 | See note below |
 
-Exact IC/resistor quantities were not reliably extractable from the schematic PDF text (CAD
-export layout scrambles reading order), and the resistor value printed ("220kΩ") looks
-suspiciously high for LED current-limiting (typically 220Ω–330Ω) — likely a mislabeled
-default in the EasyEDA export. Verify counts and resistor value directly in EasyEDA or
-visually in the schematic before ordering.
-
-Cross-referencing `Drawn Wiring Diagram 1 - Shift Registers.jpg` (hand-drawn pre-PCB wiring
-notes) suggests at least **4× 74HC165** (daisy-chained in banks of 8: 0-7, 8-15, 16-23, 24-31)
-and **5× 74HC595** (daisy-chained 0-7 through 32-39) as a starting point, plus one
-current-limiting resistor per LED (60+ total across the panel).
+**Note on the resistors:** 220kΩ is unusually high for LED current-limiting (typically
+220Ω–330Ω; 220kΩ at 5V is ~0.02mA, well below the ~1mA needed for visible glow). This is the
+value genuinely specified in the project file, not a mislabeled CAD default — but it's worth
+visually confirming in the schematic what these resistors actually connect to before ordering,
+in case they're serving a different role (e.g. pull-ups/pull-downs on shift-register control
+lines) rather than being in series with the panel LEDs.
 
 The bare PCB itself can be ordered directly from the Gerbers in
 `Circuit Board/Gerber_PCB1_2024-05-04.zip` (fab notes reference JLCPCB, part number
