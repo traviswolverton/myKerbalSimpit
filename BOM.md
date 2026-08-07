@@ -59,30 +59,18 @@ lever toggle switches each sit next to a separate small round pilot LED rather t
 illuminated themselves, confirming the existing 5mm-LED + RTF-5010-holder line items already
 cover this rather than needing an illuminated toggle switch. The top-right panel (5 vertical LED
 bars + small round LEDs + one toggle) is confirmable as the Fuel Display Panel — its STL geometry
-(5× 10.3×27mm slots + 7× 8.4mm round holes) matches exactly.
-
-**Two extra buttons not on the Parts List at all:** beyond the missile-switch-adjacent button
-already matched to Abort/Stage Panel's 12mm hole, there's a second, separate illuminated button
-at the far bottom-left and bottom-right corners of the console — confirmed via close-up photos to
-be genuine buttons with lit LED rings (not screw-head reflections), color-matched to their side's
-missile switch (**red** bottom-left, **green** bottom-right). These sit well below the missile
-switches, separated by the full panel height, and don't match any hole in the flat panel scans
-(Left/Right Side Panel, Bottom/Front/Rear Panel). Since every quantity in the Parts List's 46
-items already reconciles exactly without them, these two are most likely something the builder
-added beyond the stock design — not a mis-scan on my end. Best geometric lead: a multi-plane scan
-of `Combo Brace v8.stl` and `Combo Brace 2 v7.stl` (the two 3D corner brackets carrying the
-fan+switch+knob assembly) found a consistent ~10mm round hole in each, a standard anti-vandal
-button size — plausible but not confirmed, since 3D bracket geometry doesn't slice as cleanly as
-a flat panel.
-
-- **Corner button, ×2 (confirmed real, panel unconfirmed)** — genuine illuminated pushbutton, red on the left, green on the right. Best current match: a ~10mm anti-vandal metal pushbutton with ring LED, e.g. [NDZZQBPGO 10mm anti-vandal momentary pushbutton, ring LED](https://www.amazon.com/Momentary-Latching-Illuminated-Anti-Vandal-Waterproof/dp/B0CY2D4HVM) in red and green. Since this isn't in the original Parts List, measure the actual hole on your build directly before ordering rather than trusting this size guess.
+(5× 10.3×27mm slots + 7× 8.4mm round holes) matches exactly. The illuminated red/green corner
+buttons that looked separate from the missile switches across several photos turned out to be the
+same button already matched to the Abort/Stage Panel's 12mm hole (confirmed directly by the
+builder) — a case of misjudging distance/position across different camera angles, not a
+missing/extra part. No open items remain from the photo review.
 
 - **Arduino Mega** — genuine [Arduino Mega 2560 REV3](https://www.amazon.com/Arduino-ATmega2560-Compatible-Advanced-Projects/dp/B0046AMGW0) or any ATmega2560-compatible clone (ELEGOO, SainSmart, KEYESTUDIO all show up on Amazon).
 - **MW RS-25-5** — this is a real Mean Well part number, sold at [DigiKey](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-25-5/7706180), [Mouser](https://www.mouser.com/ProductDetail/MEAN-WELL/RS-25-5), and [Newark](https://www.newark.com/mean-well/rs-25-5/power-supply-ac-dc-5v-5a/dp/99AC4268). 5V/5A/25W AC-DC supply.
 - **USB Type-B panel-mount connector** — generic part, e.g. [rectangular panel-mount USB-B connector](https://www.amazon.com/QIANRENON-Rectangular-Connector-Bulkhead-Mounting/dp/B0DG2MD5L4) (23×18.5mm cutout).
 - **Power input switch** — since the RS-25-5 takes mains AC input, this is likely an IEC C14 inlet with integrated rocker switch (and often a fuse holder), e.g. [IEC 320 C14 inlet + rocker switch panel socket](https://www.amazon.com/Antrader-Rocker-Switch-Socket-Connector/dp/B07F2SWY56). Worth confirming panel cutout size against the STL before buying.
 - **30mm fan** — standard 30×30×10mm 12V brushless fan, e.g. [GDSTIME 30mm 12V fan](https://www.amazon.com/GDSTIME-30mm-Small-Brushless-Cooling/dp/B00MYNX0ZI).
-- **12mm switch** — the finished-build photos confirm this is an anti-vandal metal pushbutton with ring LED, e.g. [DMWD 12mm anti-vandal momentary pushbutton, blue ring LED](https://www.amazon.com/Super-Short-Momentary-Button-Switch/dp/B0GHN8CRMF), or the wider color range at [Evelta's 12mm anti-vandal series](https://evelta.com/12mm-metal-push-button-switch-anti-vandal-momentary-ring-led-red-4-pin/) (red/green/blue/yellow). Matches the Menu Panel's 12mm holes confirmed below.
+- **12mm switch** — the finished-build photos confirm this is an anti-vandal metal pushbutton with ring LED, e.g. [DMWD 12mm anti-vandal momentary pushbutton, blue ring LED](https://www.amazon.com/Super-Short-Momentary-Button-Switch/dp/B0GHN8CRMF), or the wider color range at [Evelta's 12mm anti-vandal series](https://evelta.com/12mm-metal-push-button-switch-anti-vandal-momentary-ring-led-red-4-pin/) (red/green/blue/yellow). Matches the Menu Panel's 12mm holes confirmed below — including the Abort/Stage Panel's 12mm button (60mm below each missile switch), confirmed lit red on Abort and green on Stage, so buy those two in the matching color rather than the same color as the rest of the bank.
 - **Slide potentiometer** — 10kΩ linear-taper slide pot for the throttle, e.g. [Bourns 10K slide potentiometer, 100mm travel](https://www.amazon.com/BOURNS-Potentiometer-Travel-Single-Linear/dp/B079ZQ6T13) (pick travel length to match the Throttle Panel STL).
 - **3-axis joystick, R400B-M4** — this is a real, specific part (a 10kΩ 4-axis potentiometer joystick module, sometimes sold as JH-D400B-M4), primarily found on **AliExpress** rather than Amazon, e.g. [R400B-M4 four-dimensional joystick potentiometer](https://www.aliexpress.com/item/1005006777915138.html). Also listed in [EasyEDA's component library](https://easyeda.com/components/JOYSTICK-R400B-M4_2746fd950f1e4884b7d537fe7571a120) if you want the footprint/symbol.
 - **4-color LED bar** — closest match is a 10-segment, 4-color LED bar graph (red/yellow/green/blue), e.g. [AITRIP 10-segment 4-color LED bar graph](https://www.amazon.com/AITRIP-Segment-Display-2xSuper-3xYellow/dp/B0CB3JB3P8), which is close in footprint to the measured 10.3mm × 27mm rectangular cutout (below) but not an exact match — confirm segment count and body size against the panel before buying.
