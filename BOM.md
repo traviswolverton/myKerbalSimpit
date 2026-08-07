@@ -59,19 +59,23 @@ lever toggle switches each sit next to a separate small round pilot LED rather t
 illuminated themselves, confirming the existing 5mm-LED + RTF-5010-holder line items already
 cover this rather than needing an illuminated toggle switch. The top-right panel (5 vertical LED
 bars + small round LEDs + one toggle) is confirmable as the Fuel Display Panel — its STL geometry
-(5× 10.3×27mm slots + 7× 8.4mm round holes) matches exactly. One thing these photos raise but
-don't fully resolve: there are two single illuminated round buttons at the far bottom corners of
-the finished panel, mounted on the front-facing surface (not wrapped onto a side wall, per a
-follow-up angled photo). They don't match any hole in the flat Left/Right Side Panel or
-Bottom/Front/Rear Panel scans — but a multi-plane scan of `Combo Brace v8.stl` and
-`Combo Brace 2 v7.stl` (the two 3D corner brackets that carry the fan+switch+knob assembly, per
-the earlier CAD renders) found a consistent **~10mm round hole** running through each, present at
-several slice positions rather than a one-off artifact. 10mm is itself a standard anti-vandal
-pushbutton size, and matches the visual scale of these two buttons (smaller than the 12mm switch
-bank) better than anything else checked so far — plausible but not fully confirmed, since 3D
-bracket geometry is harder to slice cleanly than a flat panel.
+(5× 10.3×27mm slots + 7× 8.4mm round holes) matches exactly.
 
-- **Corner button, ×2 (unconfirmed — best current match)** — likely a 10mm anti-vandal metal pushbutton with ring LED, e.g. [NDZZQBPGO 10mm anti-vandal momentary pushbutton, ring LED](https://www.amazon.com/Momentary-Latching-Illuminated-Anti-Vandal-Waterproof/dp/B0CY2D4HVM). Confirm against the Combo Brace geometry (or a straight-on close-up photo) before buying — this is a plausible match, not a certain one.
+**Two extra buttons not on the Parts List at all:** beyond the missile-switch-adjacent button
+already matched to Abort/Stage Panel's 12mm hole, there's a second, separate illuminated button
+at the far bottom-left and bottom-right corners of the console — confirmed via close-up photos to
+be genuine buttons with lit LED rings (not screw-head reflections), color-matched to their side's
+missile switch (**red** bottom-left, **green** bottom-right). These sit well below the missile
+switches, separated by the full panel height, and don't match any hole in the flat panel scans
+(Left/Right Side Panel, Bottom/Front/Rear Panel). Since every quantity in the Parts List's 46
+items already reconciles exactly without them, these two are most likely something the builder
+added beyond the stock design — not a mis-scan on my end. Best geometric lead: a multi-plane scan
+of `Combo Brace v8.stl` and `Combo Brace 2 v7.stl` (the two 3D corner brackets carrying the
+fan+switch+knob assembly) found a consistent ~10mm round hole in each, a standard anti-vandal
+button size — plausible but not confirmed, since 3D bracket geometry doesn't slice as cleanly as
+a flat panel.
+
+- **Corner button, ×2 (confirmed real, panel unconfirmed)** — genuine illuminated pushbutton, red on the left, green on the right. Best current match: a ~10mm anti-vandal metal pushbutton with ring LED, e.g. [NDZZQBPGO 10mm anti-vandal momentary pushbutton, ring LED](https://www.amazon.com/Momentary-Latching-Illuminated-Anti-Vandal-Waterproof/dp/B0CY2D4HVM) in red and green. Since this isn't in the original Parts List, measure the actual hole on your build directly before ordering rather than trusting this size guess.
 
 - **Arduino Mega** — genuine [Arduino Mega 2560 REV3](https://www.amazon.com/Arduino-ATmega2560-Compatible-Advanced-Projects/dp/B0046AMGW0) or any ATmega2560-compatible clone (ELEGOO, SainSmart, KEYESTUDIO all show up on Amazon).
 - **MW RS-25-5** — this is a real Mean Well part number, sold at [DigiKey](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-25-5/7706180), [Mouser](https://www.mouser.com/ProductDetail/MEAN-WELL/RS-25-5), and [Newark](https://www.newark.com/mean-well/rs-25-5/power-supply-ac-dc-5v-5a/dp/99AC4268). 5V/5A/25W AC-DC supply.
