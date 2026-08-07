@@ -60,10 +60,18 @@ illuminated themselves, confirming the existing 5mm-LED + RTF-5010-holder line i
 cover this rather than needing an illuminated toggle switch. The top-right panel (5 vertical LED
 bars + small round LEDs + one toggle) is confirmable as the Fuel Display Panel — its STL geometry
 (5× 10.3×27mm slots + 7× 8.4mm round holes) matches exactly. One thing these photos raise but
-don't resolve: there are two single illuminated round buttons at the far bottom corners of the
-finished panel that don't match any hole cluster found in the STL scan (Left/Right Side Panel
-only showed screw and fan-mount holes) — likely the same anti-vandal button family, possibly a
-power/reset function, but unidentified as to which panel STL they actually belong to.
+don't fully resolve: there are two single illuminated round buttons at the far bottom corners of
+the finished panel, mounted on the front-facing surface (not wrapped onto a side wall, per a
+follow-up angled photo). They don't match any hole in the flat Left/Right Side Panel or
+Bottom/Front/Rear Panel scans — but a multi-plane scan of `Combo Brace v8.stl` and
+`Combo Brace 2 v7.stl` (the two 3D corner brackets that carry the fan+switch+knob assembly, per
+the earlier CAD renders) found a consistent **~10mm round hole** running through each, present at
+several slice positions rather than a one-off artifact. 10mm is itself a standard anti-vandal
+pushbutton size, and matches the visual scale of these two buttons (smaller than the 12mm switch
+bank) better than anything else checked so far — plausible but not fully confirmed, since 3D
+bracket geometry is harder to slice cleanly than a flat panel.
+
+- **Corner button, ×2 (unconfirmed — best current match)** — likely a 10mm anti-vandal metal pushbutton with ring LED, e.g. [NDZZQBPGO 10mm anti-vandal momentary pushbutton, ring LED](https://www.amazon.com/Momentary-Latching-Illuminated-Anti-Vandal-Waterproof/dp/B0CY2D4HVM). Confirm against the Combo Brace geometry (or a straight-on close-up photo) before buying — this is a plausible match, not a certain one.
 
 - **Arduino Mega** — genuine [Arduino Mega 2560 REV3](https://www.amazon.com/Arduino-ATmega2560-Compatible-Advanced-Projects/dp/B0046AMGW0) or any ATmega2560-compatible clone (ELEGOO, SainSmart, KEYESTUDIO all show up on Amazon).
 - **MW RS-25-5** — this is a real Mean Well part number, sold at [DigiKey](https://www.digikey.com/en/products/detail/mean-well-usa-inc/RS-25-5/7706180), [Mouser](https://www.mouser.com/ProductDetail/MEAN-WELL/RS-25-5), and [Newark](https://www.newark.com/mean-well/rs-25-5/power-supply-ac-dc-5v-5a/dp/99AC4268). 5V/5A/25W AC-DC supply.
