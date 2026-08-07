@@ -29,7 +29,7 @@ Extracted from the "Parts List" title block in `KSP+Controller+Assembly+Drawing.
 | 1 | 5mm yellow LED |
 | 1 | 5mm white LED |
 | 23 | LED holder, RTF-5010, 5mm press-fit |
-| 4 | SPDT print-switch (verify against build guide — may be a mechanism part, not off-the-shelf) |
+| 4 | SPDT toggle switch, panel-mount, non-illuminated, no cover (generic — no vendor SKU in source files) |
 | 118 | M3×5mm socket-head screw (McMaster 91290A115) |
 | 10 | M2×5mm socket-head screw, black oxide (McMaster 91290A012) |
 
